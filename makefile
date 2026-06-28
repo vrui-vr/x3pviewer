@@ -150,6 +150,8 @@ X3PVIEWER_SOURCES = X3PScan.cpp \
                     LabelTool.cpp \
                     X3PViewer.cpp
 
+$(X3PVIEWER_SOURCES:%.cpp=$(OBJDIR)/%.o): | $(DEPDIR)/config
+
 $(EXEDIR)/X3PViewer: $(X3PVIEWER_SOURCES:%.cpp=$(OBJDIR)/%.o)
 .PHONY: X3PViewer
 X3PViewer: $(EXEDIR)/X3PViewer
