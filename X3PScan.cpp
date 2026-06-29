@@ -310,7 +310,6 @@ X3PScan readX3PFile(const char* fileName)
 	
 	/* Create a result structure: */
 	X3PScan result(matrixSize[axisIndices[0]],matrixSize[axisIndices[1]]);
-	ptrdiff_t height=result.getSize(1);
 	
 	/* Read point data from a binary point data file: */
 	const std::string& pointDataLink=getCharacterData(main,"/Record3/DataLink/PointDataLink");
